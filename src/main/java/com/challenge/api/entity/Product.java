@@ -24,7 +24,4 @@ public class Product {
     private float price;
 
     private String category;
-
-    @OneToMany(mappedBy = "product")
-    private List<Image> images;
 }
