@@ -1,25 +1,20 @@
 package com.challenge.api.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import lombok.Data;
 
 import javax.persistence.*;
 
-@Table(name = "image")
+@Data
 @Entity
 public class Image {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String url;
 
-    private float size;
-
-    private String img_url;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "product_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name="product_id")
     private Product product;
 }

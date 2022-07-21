@@ -1,11 +1,14 @@
 package com.challenge.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -27,4 +30,8 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     private List<Image> images;
+
+    public void addImage(Image img) {
+        this.images.add(img);
+    }
 }
