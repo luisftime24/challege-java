@@ -1,69 +1,145 @@
-2022-07-20 00:21:39.992  INFO 6330 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 00:21:40.274 ERROR 6330 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Error thrown while acquiring connection from data source
+2022-07-21 16:17:17.345  INFO 14402 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 14402 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
+2022-07-21 16:17:17.346 DEBUG 14402 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-21 16:17:17.346  INFO 14402 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-07-21 16:17:17.366  INFO 14402 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-21 16:17:17.366  INFO 14402 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-21 16:17:17.623  INFO 14402 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-21 16:17:17.644  INFO 14402 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2022-07-21 16:17:17.765  INFO 14402 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$29b3b204] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-21 16:17:17.784  INFO 14402 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-07-21 16:17:18.000  INFO 14402 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-21 16:17:18.005  INFO 14402 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-21 16:17:18.005  INFO 14402 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:17:18.030  INFO 14402 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-21 16:17:18.031  INFO 14402 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2022-07-21 16:17:18.054  INFO 14402 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-21 16:17:18.214  INFO 14402 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-21 16:17:18.220  INFO 14402 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
+2022-07-21 16:17:18.440  INFO 14402 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-07-21 16:17:18.517  INFO 14402 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
+2022-07-21 16:17:18.556  INFO 14402 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-07-21 16:17:18.602  INFO 14402 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:17:18.621  INFO 14402 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:17:18.687  INFO 14402 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:17:18.729  INFO 14402 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-21 16:17:18.955  INFO 14402 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:17:18.959  INFO 14402 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-21 16:17:19.109  WARN 14402 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-21 16:17:19.257  INFO 14402 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-21 16:17:19.274  INFO 14402 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-21 16:17:19.279  INFO 14402 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.312 seconds (JVM running for 2.505)
+2022-07-21 16:17:22.709  INFO 14402 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:17:22.709  INFO 14402 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-21 16:17:22.710  INFO 14402 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-21 16:17:22.797  INFO 14402 --- [http-nio-8080-exec-2] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.serviceImpl.ProductServiceImpl.getAllProducts() time taken to execute : 70 ms
+2022-07-21 16:17:26.346  INFO 14402 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.serviceImpl.ProductServiceImpl.getProductById(Long) time taken to execute : 12 ms
+2022-07-21 16:17:27.018  INFO 14402 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 671 ms
+2022-07-21 16:17:29.906  INFO 14402 --- [http-nio-8080-exec-4] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.serviceImpl.ProductServiceImpl.addProduct(Product) time taken to execute : 16 ms
+2022-07-21 16:17:32.961  INFO 14402 --- [http-nio-8080-exec-5] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.serviceImpl.ProductServiceImpl.updateProduct(Long,Product) time taken to execute : 19 ms
+2022-07-21 16:17:36.030  INFO 14402 --- [http-nio-8080-exec-6] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 615 ms
+2022-07-21 16:17:38.297  INFO 14402 --- [http-nio-8080-exec-7] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.serviceImpl.ProductServiceImpl.getAllProducts() time taken to execute : 10 ms
+2022-07-21 16:19:29.444  INFO 14402 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-21 16:19:29.447  INFO 14402 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-21 16:19:29.449  INFO 14402 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-21 16:19:31.245  INFO 14443 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 14443 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
+2022-07-21 16:19:31.245 DEBUG 14443 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-21 16:19:31.246  INFO 14443 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-07-21 16:19:31.270  INFO 14443 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-21 16:19:31.270  INFO 14443 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-21 16:19:31.523  INFO 14443 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-21 16:19:31.543  INFO 14443 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2022-07-21 16:19:31.667  INFO 14443 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d74c1890] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-21 16:19:31.687  INFO 14443 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-07-21 16:19:31.897  INFO 14443 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-21 16:19:31.902  INFO 14443 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-21 16:19:31.902  INFO 14443 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:19:31.928  INFO 14443 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-21 16:19:31.928  INFO 14443 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 658 ms
+2022-07-21 16:19:31.946  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-21 16:19:32.102  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-21 16:19:32.107  INFO 14443 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
+2022-07-21 16:19:32.313  INFO 14443 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-07-21 16:19:32.383  INFO 14443 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
+2022-07-21 16:19:32.418  INFO 14443 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-07-21 16:19:32.463  INFO 14443 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:19:32.481  INFO 14443 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:19:32.545  INFO 14443 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:19:32.590  INFO 14443 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-21 16:19:32.817  INFO 14443 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:19:32.820  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-21 16:19:32.954  WARN 14443 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'imageService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imageServiceImpl': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-07-21 16:19:32.955  INFO 14443 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-21 16:19:32.956  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-21 16:19:32.960  INFO 14443 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-21 16:19:32.962  INFO 14443 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-21 16:19:32.967  INFO 14443 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos esta abierta en modo EXCLUSIVO; no puede abrir conexiones adicionales
-The database is open in exclusive mode; can not open additional connections [90135-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:188) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.SessionLocal.checkSuspended(SessionLocal.java:1240) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.SessionLocal.isOpen(SessionLocal.java:1173) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.SessionLocal.waitIfExclusiveModeEnabled(SessionLocal.java:1486) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeQuery(Command.java:180) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcConnection.isReadOnly(JdbcConnection.java:538) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:408) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712) ~[HikariCP-4.0.3.jar:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-21 16:19:32.976 ERROR 14443 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-2022-07-20 00:21:40.371  WARN 6330 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
-2022-07-20 00:21:40.371  INFO 6330 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 00:21:40.526  INFO 6330 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 09:29:47.114  INFO 9027 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9027 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 09:29:47.114 DEBUG 9027 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 09:29:47.115  INFO 9027 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 09:29:47.137  INFO 9027 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 09:29:47.137  INFO 9027 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 09:29:47.399  INFO 9027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 09:29:47.422  INFO 9027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
-2022-07-20 09:29:47.544  INFO 9027 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f6008309] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 09:29:47.564  INFO 9027 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 09:29:47.786  INFO 9027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 09:29:47.791  INFO 9027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 09:29:47.791  INFO 9027 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 09:29:47.819  INFO 9027 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 09:29:47.819  INFO 9027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
-2022-07-20 09:29:47.847  INFO 9027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 09:29:48.036  INFO 9027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 09:29:48.041  INFO 9027 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 09:29:48.112  INFO 9027 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 09:29:48.130  INFO 9027 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 09:29:48.200  INFO 9027 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 09:29:48.246  INFO 9027 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 09:29:48.528  INFO 9027 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 09:29:48.532  INFO 9027 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 09:29:48.695  WARN 9027 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 09:29:48.861  INFO 9027 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 09:29:48.874  INFO 9027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 09:29:48.879  INFO 9027 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 1.993 seconds (JVM running for 2.219)
-2022-07-20 09:29:55.711  INFO 9027 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-20 09:29:55.711  INFO 9027 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-20 09:29:55.712  INFO 9027 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-07-20 09:29:55.762 ERROR 9027 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Product is not found for the id 1] with root cause
+***************************
+APPLICATION FAILED TO START
+***************************
 
-java.lang.RuntimeException: Product is not found for the id 1
-	at com.challenge.api.service.ProductServiceImpl.getProductById(ProductServiceImpl.java:31) ~[classes/:na]
-	at com.challenge.api.service.ProductServiceImpl$$FastClassBySpringCGLIB$$ecc2b0b.invoke(<generated>) ~[classes/:na]
+Description:
+
+Field restTemplate in com.challenge.api.externalService.ImageServiceImpl required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2022-07-21 16:21:08.629  INFO 14471 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 14471 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
+2022-07-21 16:21:08.630 DEBUG 14471 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-21 16:21:08.630  INFO 14471 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-07-21 16:21:08.651  INFO 14471 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-21 16:21:08.651  INFO 14471 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-21 16:21:08.916  INFO 14471 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-21 16:21:08.936  INFO 14471 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2022-07-21 16:21:09.062  INFO 14471 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$356d779e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-21 16:21:09.081  INFO 14471 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-07-21 16:21:09.303  INFO 14471 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-21 16:21:09.308  INFO 14471 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-21 16:21:09.308  INFO 14471 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-21 16:21:09.334  INFO 14471 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-21 16:21:09.334  INFO 14471 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 683 ms
+2022-07-21 16:21:09.360  INFO 14471 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-21 16:21:09.527  INFO 14471 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-21 16:21:09.532  INFO 14471 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
+2022-07-21 16:21:09.751  INFO 14471 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-07-21 16:21:09.817  INFO 14471 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
+2022-07-21 16:21:09.852  INFO 14471 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-07-21 16:21:09.899  INFO 14471 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-21 16:21:09.918  INFO 14471 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-21 16:21:09.991  INFO 14471 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-21 16:21:10.033  INFO 14471 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-21 16:21:10.265  INFO 14471 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-21 16:21:10.268  INFO 14471 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-21 16:21:10.421  WARN 14471 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-21 16:21:10.580  INFO 14471 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-21 16:21:10.593  INFO 14471 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-21 16:21:10.598  INFO 14471 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.282 seconds (JVM running for 2.474)
+2022-07-21 16:21:31.481  INFO 14471 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-21 16:21:31.482  INFO 14471 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-21 16:21:31.483  INFO 14471 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-21 16:21:32.200  INFO 14471 --- [http-nio-8080-exec-1] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 692 ms
+2022-07-21 16:21:35.301 ERROR 14471 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "{"status":404,"error":"Not Found"}"] with root cause
+
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "{"status":404,"error":"Not Found"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:113) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:334) ~[spring-web-5.3.21.jar:5.3.21]
+	at com.challenge.api.externalService.ImageServiceImpl.getPhoto(ImageServiceImpl.java:18) ~[classes/:na]
+	at com.challenge.api.externalService.ImageServiceImpl$$FastClassBySpringCGLIB$$7f06db4a.invoke(<generated>) ~[classes/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.21.jar:5.3.21]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.21.jar:5.3.21]
@@ -81,8 +157,8 @@ java.lang.RuntimeException: Product is not found for the id 1
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.21.jar:5.3.21]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.21.jar:5.3.21]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.21.jar:5.3.21]
-	at com.challenge.api.service.ProductServiceImpl$$EnhancerBySpringCGLIB$$c0517db7.getProductById(<generated>) ~[classes/:na]
-	at com.challenge.api.controller.ProductController.getProductById(ProductController.java:32) ~[classes/:na]
+	at com.challenge.api.externalService.ImageServiceImpl$$EnhancerBySpringCGLIB$$c862b6c8.getPhoto(<generated>) ~[classes/:na]
+	at com.challenge.api.controller.ProductController.getCountries(ProductController.java:46) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.21.jar:5.3.21]
@@ -132,830 +208,90 @@ java.lang.RuntimeException: Product is not found for the id 1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2022-07-20 09:29:59.289  INFO 9027 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.ProductServiceImpl.getAllProducts() time taken to execute : 69 ms
-2022-07-20 09:30:10.123  INFO 9027 --- [http-nio-8080-exec-5] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.addProduct(Product) time taken to execute : 19 ms
-2022-07-20 09:30:31.061  INFO 9027 --- [http-nio-8080-exec-6] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.addProduct(Product) time taken to execute : 9 ms
-2022-07-20 09:31:47.555  INFO 9027 --- [http-nio-8080-exec-8] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.addProduct(Product) time taken to execute : 9 ms
-2022-07-20 09:31:51.214  INFO 9027 --- [http-nio-8080-exec-10] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.ProductServiceImpl.getAllProducts() time taken to execute : 26 ms
-2022-07-20 09:31:59.514  INFO 9027 --- [http-nio-8080-exec-2] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.getProductById(Long) time taken to execute : 8 ms
-2022-07-20 09:32:00.193  INFO 9027 --- [http-nio-8080-exec-2] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 676 ms
-2022-07-20 09:32:40.238  INFO 9027 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 09:32:40.240  INFO 9027 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 09:32:40.243  INFO 9027 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 09:32:42.334  INFO 9045 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9045 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 09:32:42.334 DEBUG 9045 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 09:32:42.334  INFO 9045 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 09:32:42.356  INFO 9045 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 09:32:42.356  INFO 9045 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 09:32:42.645  INFO 9045 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 09:32:42.666  INFO 9045 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
-2022-07-20 09:32:42.800  INFO 9045 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$77734b85] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 09:32:42.822  INFO 9045 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 09:32:43.061  INFO 9045 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 09:32:43.067  INFO 9045 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 09:32:43.067  INFO 9045 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 09:32:43.105  INFO 9045 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 09:32:43.105  INFO 9045 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 748 ms
-2022-07-20 09:32:43.127  INFO 9045 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 09:32:43.293  INFO 9045 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 09:32:43.298  INFO 9045 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 09:32:43.371  INFO 9045 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 09:32:43.389  INFO 9045 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 09:32:43.459  INFO 9045 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 09:32:43.502  INFO 9045 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 09:32:43.757  INFO 9045 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 09:32:43.760  INFO 9045 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 09:32:43.934  WARN 9045 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 09:32:44.115  INFO 9045 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 09:32:44.128  INFO 9045 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 09:32:44.134  INFO 9045 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.106 seconds (JVM running for 2.303)
-2022-07-20 09:32:44.557  INFO 9045 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-20 09:32:44.557  INFO 9045 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-20 09:32:44.557  INFO 9045 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-07-20 09:32:44.607  INFO 9045 --- [http-nio-8080-exec-1] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.getProductById(Long) time taken to execute : 27 ms
-2022-07-20 09:32:45.324  INFO 9045 --- [http-nio-8080-exec-1] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 716 ms
-2022-07-20 09:32:59.639  INFO 9045 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 512 ms
-2022-07-20 09:39:50.257  INFO 9045 --- [http-nio-8080-exec-6] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.ProductServiceImpl.getAllProducts() time taken to execute : 75 ms
-2022-07-20 10:04:28.232  INFO 9045 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:04:28.235  INFO 9045 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:04:28.237  INFO 9045 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:04:31.012  INFO 9203 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9203 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:04:31.012 DEBUG 9203 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:04:31.013  INFO 9203 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:04:31.033  INFO 9203 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:04:31.033  INFO 9203 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:04:31.287  INFO 9203 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:04:31.310  INFO 9203 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:04:31.431  INFO 9203 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:04:31.451  INFO 9203 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:04:31.667  INFO 9203 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:04:31.672  INFO 9203 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:04:31.672  INFO 9203 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:04:31.697  INFO 9203 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:04:31.697  INFO 9203 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
-2022-07-20 10:04:31.722  INFO 9203 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:04:31.885  INFO 9203 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:04:31.889  INFO 9203 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:04:32.110  INFO 9203 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:04:32.126  INFO 9203 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:04:32.129  WARN 9203 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: classpath:/db/changelog/db.changelog-master.yaml does not exist
-2022-07-20 10:04:32.129  INFO 9203 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:04:32.133  INFO 9203 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:04:32.134  INFO 9203 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:04:32.139  INFO 9203 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-07-21 16:21:41.424  INFO 14471 --- [http-nio-8080-exec-5] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 515 ms
+2022-07-21 16:21:44.803  INFO 14471 --- [http-nio-8080-exec-6] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 428 ms
+2022-07-21 16:21:47.295  INFO 14471 --- [http-nio-8080-exec-7] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 428 ms
+2022-07-21 16:21:49.900  INFO 14471 --- [http-nio-8080-exec-8] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 514 ms
+2022-07-21 16:21:52.660 ERROR 14471 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "{"status":404,"error":"Not Found"}"] with root cause
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:04:32.147 ERROR 9203 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Liquibase failed to start because no changelog could be found at 'classpath:/db/changelog/db.changelog-master.yaml'.
-
-Action:
-
-Make sure a Liquibase changelog is present at the configured path.
-
-2022-07-20 10:18:50.575  INFO 9405 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9405 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:18:50.575 DEBUG 9405 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:18:50.576  INFO 9405 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:18:50.598  INFO 9405 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:18:50.598  INFO 9405 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:18:50.867  INFO 9405 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:18:50.889  INFO 9405 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:18:51.019  INFO 9405 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:18:51.048  INFO 9405 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:18:51.265  INFO 9405 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:18:51.270  INFO 9405 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:18:51.270  INFO 9405 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:18:51.302  INFO 9405 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:18:51.303  INFO 9405 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 705 ms
-2022-07-20 10:18:51.323  INFO 9405 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:18:51.326  WARN 9405 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-07-20 10:18:51.490  INFO 9405 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:18:51.495  INFO 9405 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:18:51.720  INFO 9405 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:18:51.730  INFO 9405 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:18:51.733  WARN 9405 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: The file classpath:db/changelog/changelog-master.xml was not found in
-    - file:/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes/
-Specifying files by absolute path was removed in Liquibase 4.0. Please use a relative path or add '/' to the classpath parameter.
-2022-07-20 10:18:51.734  INFO 9405 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:18:51.737  INFO 9405 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:18:51.738  INFO 9405 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:18:51.744  INFO 9405 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:18:51.753 ERROR 9405 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ChangeLogParseException: The file classpath:db/changelog/changelog-master.xml was not found in
-    - file:/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes/
-Specifying files by absolute path was removed in Liquibase 4.0. Please use a relative path or add '/' to the classpath parameter.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: "{"status":404,"error":"Not Found"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:113) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:334) ~[spring-web-5.3.21.jar:5.3.21]
+	at com.challenge.api.externalService.ImageServiceImpl.getPhoto(ImageServiceImpl.java:18) ~[classes/:na]
+	at com.challenge.api.externalService.ImageServiceImpl$$FastClassBySpringCGLIB$$7f06db4a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.21.jar:5.3.21]
+	at com.challenge.api.advice.ExecuteTimeTrackerAdvice.trackTime(ExecuteTimeTrackerAdvice.java:22) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ChangeLogParseException: The file classpath:db/changelog/changelog-master.xml was not found in
-    - file:/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes/
-Specifying files by absolute path was removed in Liquibase 4.0. Please use a relative path or add '/' to the classpath parameter.
-	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:99) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.getDatabaseChangeLog(Liquibase.java:369) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:224) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
-2022-07-20 10:25:42.500  INFO 9485 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9485 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:25:42.501 DEBUG 9485 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:25:42.501  INFO 9485 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:25:42.522  INFO 9485 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:25:42.522  INFO 9485 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:25:42.788  INFO 9485 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:25:42.812  INFO 9485 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:25:42.947  INFO 9485 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:25:42.968  INFO 9485 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:25:43.193  INFO 9485 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:25:43.199  INFO 9485 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:25:43.199  INFO 9485 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:25:43.228  INFO 9485 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:25:43.228  INFO 9485 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 706 ms
-2022-07-20 10:25:43.255  INFO 9485 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:25:43.258  WARN 9485 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-07-20 10:25:43.412  INFO 9485 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:25:43.418  INFO 9485 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:25:43.646  INFO 9485 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:25:43.672  INFO 9485 --- [restartedMain] liquibase.changelog                      : Creating database history table with name: db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:25:43.693  INFO 9485 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:25:43.712  INFO 9485 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:25:43.713  WARN 9485 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
-
-2022-07-20 10:25:43.714  INFO 9485 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:25:43.718  INFO 9485 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:25:43.719  INFO 9485 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:25:43.725  INFO 9485 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:25:43.736 ERROR 9485 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.21.jar:5.3.21]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.21.jar:5.3.21]
+	at com.challenge.api.externalService.ImageServiceImpl$$EnhancerBySpringCGLIB$$c862b6c8.getPhoto(<generated>) ~[classes/:na]
+	at com.challenge.api.controller.ProductController.getCountries(ProductController.java:46) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
-2022-07-20 10:25:58.760  INFO 9494 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9494 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:25:58.760 DEBUG 9494 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:25:58.761  INFO 9494 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:25:58.781  INFO 9494 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:25:58.781  INFO 9494 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:25:59.027  INFO 9494 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:25:59.048  INFO 9494 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:25:59.168  INFO 9494 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$29b3b204] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:25:59.187  INFO 9494 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:25:59.398  INFO 9494 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:25:59.403  INFO 9494 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:25:59.403  INFO 9494 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:25:59.430  INFO 9494 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:25:59.430  INFO 9494 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 649 ms
-2022-07-20 10:25:59.453  INFO 9494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:25:59.614  INFO 9494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:25:59.619  INFO 9494 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:25:59.832  INFO 9494 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:25:59.906  INFO 9494 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:25:59.930  INFO 9494 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:25:59.932  WARN 9494 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
-
-2022-07-20 10:25:59.932  INFO 9494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:25:59.936  INFO 9494 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:25:59.937  INFO 9494 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:25:59.942  INFO 9494 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:25:59.952 ERROR 9494 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 changes have validation failures
-          'sql' is required, classpath:db/changelog/changelog.sql::1::liquibase
-
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
-2022-07-20 10:27:29.569  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9504 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:27:29.569 DEBUG 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:27:29.569  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:27:29.591  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:27:29.591  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:27:29.859  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:27:29.880  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:27:30.009  INFO 9504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:27:30.029  INFO 9504 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:27:30.252  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:27:30.257  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:27:30.258  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:27:30.286  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:27:30.286  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 695 ms
-2022-07-20 10:27:30.310  INFO 9504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:27:30.482  INFO 9504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:27:30.488  INFO 9504 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:27:30.702  INFO 9504 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:27:30.774  INFO 9504 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:27:30.809  INFO 9504 --- [restartedMain] liquibase.changelog                      : Custom SQL executed
-2022-07-20 10:27:30.810  INFO 9504 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:db/changelog/changelog.sql::1::liquibase ran successfully in 5ms
-2022-07-20 10:27:30.821  INFO 9504 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:27:30.823 ERROR 9504 --- [restartedMain] liquibase                                : Could not release lock
-
-liquibase.exception.LockException: liquibase.exception.LockException: Did not update change log lock correctly.
-
-0 rows were updated instead of the expected 1 row using executor liquibase.executor.jvm.JdbcExecutor there are 0 rows in the table
-	at liquibase.lockservice.StandardLockService.releaseLock(StandardLockService.java:391) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:280) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.LockException: Did not update change log lock correctly.
-
-0 rows were updated instead of the expected 1 row using executor liquibase.executor.jvm.JdbcExecutor there are 0 rows in the table
-	at liquibase.lockservice.StandardLockService.releaseLock(StandardLockService.java:379) ~[liquibase-core-4.9.1.jar:na]
-	... 33 common frames omitted
-
-2022-07-20 10:27:30.871  INFO 9504 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:27:30.889  INFO 9504 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:27:30.963  INFO 9504 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:27:31.009  INFO 9504 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:27:31.235  INFO 9504 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:27:31.239  INFO 9504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:27:31.391  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:27:31.548  INFO 9504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:27:31.561  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:27:31.566  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.162 seconds (JVM running for 2.374)
-2022-07-20 10:27:43.670  INFO 9504 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-20 10:27:43.670  INFO 9504 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-20 10:27:43.671  INFO 9504 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-07-20 10:27:43.766  INFO 9504 --- [http-nio-8080-exec-2] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.ProductServiceImpl.getAllProducts() time taken to execute : 75 ms
-2022-07-20 10:31:14.022  INFO 9504 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:31:14.027  INFO 9504 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:31:14.032  INFO 9504 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:31:14.305  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9504 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:31:14.305 DEBUG 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:31:14.305  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:31:14.364  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:31:14.367  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:31:14.384  INFO 9504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:31:14.385  INFO 9504 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:31:14.405  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:31:14.405  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:31:14.405  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:31:14.410  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:31:14.410  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 104 ms
-2022-07-20 10:31:14.415  INFO 9504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-07-20 10:31:14.436  INFO 9504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-07-20 10:31:14.436  INFO 9504 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:31:14.465  INFO 9504 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:31:14.505  INFO 9504 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:31:14.526  INFO 9504 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:31:14.534  INFO 9504 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:31:14.535  INFO 9504 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:31:14.566  INFO 9504 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:31:14.566  INFO 9504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:31:14.608  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:31:14.653  INFO 9504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:31:14.656  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:31:14.658  INFO 9504 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 0.577 seconds (JVM running for 225.464)
-2022-07-20 10:31:14.658  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-07-20 10:31:16.086  INFO 9559 --- [main] c.c.api.TektonChallengeApplicationTests  : Starting TektonChallengeApplicationTests using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9559 (started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:31:16.086 DEBUG 9559 --- [main] c.c.api.TektonChallengeApplicationTests  : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:31:16.086  INFO 9559 --- [main] c.c.api.TektonChallengeApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:31:16.323  INFO 9559 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:31:16.343  INFO 9559 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:31:16.462  INFO 9559 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$411d3bce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:31:16.486  INFO 9559 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:31:16.669  INFO 9559 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:31:16.859  INFO 9559 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:31:16.999  INFO 9559 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:31:17.069  INFO 9559 --- [main] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:31:17.104  INFO 9559 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:31:17.163  INFO 9559 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:31:17.183  INFO 9559 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:31:17.258  INFO 9559 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:31:17.303  INFO 9559 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:31:17.537  INFO 9559 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:31:17.540  INFO 9559 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:31:17.786  WARN 9559 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:31:18.003  INFO 9559 --- [main] c.c.api.TektonChallengeApplicationTests  : Started TektonChallengeApplicationTests in 2.035 seconds (JVM running for 2.376)
-2022-07-20 10:31:18.094  INFO 9559 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:31:18.095  INFO 9559 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:31:18.098  INFO 9559 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:36:05.818  INFO 9504 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:36:05.820  INFO 9504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-07-20 10:36:05.827  INFO 9504 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-07-20 10:36:07.574  INFO 9608 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9608 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:36:07.574 DEBUG 9608 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:36:07.575  INFO 9608 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:36:07.594  INFO 9608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:36:07.595  INFO 9608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:36:07.841  INFO 9608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:36:07.865  INFO 9608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:36:07.983  INFO 9608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$10851075] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:36:08.005  INFO 9608 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:36:08.209  INFO 9608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:36:08.213  INFO 9608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:36:08.213  INFO 9608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:36:08.240  INFO 9608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:36:08.240  INFO 9608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 645 ms
-2022-07-20 10:36:08.262  INFO 9608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:36:08.416  INFO 9608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:36:08.421  INFO 9608 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:36:08.638  INFO 9608 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:36:08.707  INFO 9608 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:36:08.726  INFO 9608 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:36:08.727  WARN 9608 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-2022-07-20 10:36:08.727  INFO 9608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:36:08.731  INFO 9608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:36:08.732  INFO 9608 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:36:08.738  INFO 9608 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:36:08.746 ERROR 9608 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
-2022-07-20 10:40:15.566  INFO 9757 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9757 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:40:15.567 DEBUG 9757 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:40:15.567  INFO 9757 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:40:15.588  INFO 9757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:40:15.588  INFO 9757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:40:15.858  INFO 9757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:40:15.881  INFO 9757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:40:16.006  INFO 9757 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:40:16.025  INFO 9757 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:40:16.244  INFO 9757 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:40:16.249  INFO 9757 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:40:16.249  INFO 9757 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:40:16.275  INFO 9757 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:40:16.275  INFO 9757 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
-2022-07-20 10:40:16.298  INFO 9757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:40:16.465  INFO 9757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:40:16.470  INFO 9757 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:40:16.702  INFO 9757 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:40:16.776  INFO 9757 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:40:16.795  INFO 9757 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:40:16.796  WARN 9757 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-2022-07-20 10:40:16.796  INFO 9757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:40:16.800  INFO 9757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:40:16.802  INFO 9757 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:40:16.807  INFO 9757 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:40:16.815 ERROR 9757 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:c9de7ac546a5ec021c3a8668af731947
-
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
-2022-07-20 10:40:25.431  INFO 9764 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9764 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:40:25.432 DEBUG 9764 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:40:25.432  INFO 9764 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:40:25.452  INFO 9764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:40:25.453  INFO 9764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:40:25.711  INFO 9764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:40:25.731  INFO 9764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:40:25.867  INFO 9764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:40:25.887  INFO 9764 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:40:26.104  INFO 9764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:40:26.109  INFO 9764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:40:26.110  INFO 9764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:40:26.136  INFO 9764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:40:26.136  INFO 9764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 683 ms
-2022-07-20 10:40:26.161  INFO 9764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:40:26.321  INFO 9764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:40:26.326  INFO 9764 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:40:26.542  INFO 9764 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:40:26.613  INFO 9764 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:40:26.649  INFO 9764 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:40:26.700  INFO 9764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:40:26.715  INFO 9764 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:40:26.788  INFO 9764 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:40:26.833  INFO 9764 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:40:27.065  INFO 9764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:40:27.070  INFO 9764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:40:27.218  WARN 9764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:40:27.364  INFO 9764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:40:27.376  INFO 9764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:40:27.381  INFO 9764 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.112 seconds (JVM running for 2.31)
-2022-07-20 10:41:35.872  INFO 9764 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:41:35.875  INFO 9764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:41:35.878  INFO 9764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:41:37.779  INFO 9779 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9779 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:41:37.779 DEBUG 9779 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:41:37.780  INFO 9779 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:41:37.800  INFO 9779 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:41:37.801  INFO 9779 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:41:38.052  INFO 9779 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:41:38.072  INFO 9779 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:41:38.202  INFO 9779 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:41:38.222  INFO 9779 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:41:38.440  INFO 9779 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:41:38.445  INFO 9779 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:41:38.445  INFO 9779 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:41:38.472  INFO 9779 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:41:38.473  INFO 9779 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 672 ms
-2022-07-20 10:41:38.499  INFO 9779 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:41:38.659  INFO 9779 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:41:38.664  INFO 9779 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:41:38.874  INFO 9779 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:41:38.947  INFO 9779 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:41:38.984  INFO 9779 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:41:39.027  INFO 9779 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:41:39.041  INFO 9779 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:41:39.112  INFO 9779 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:41:39.150  INFO 9779 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:41:39.386  INFO 9779 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:41:39.390  INFO 9779 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:41:39.546  WARN 9779 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:41:39.698  INFO 9779 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:41:39.711  INFO 9779 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:41:39.716  INFO 9779 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.102 seconds (JVM running for 2.291)
-2022-07-20 10:42:14.821  INFO 9779 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:42:14.826  INFO 9779 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:42:14.835  INFO 9779 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:42:16.408  INFO 9794 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9794 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:42:16.409 DEBUG 9794 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:42:16.409  INFO 9794 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:42:16.430  INFO 9794 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:42:16.430  INFO 9794 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:42:16.701  INFO 9794 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:42:16.727  INFO 9794 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:42:16.859  INFO 9794 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:42:16.880  INFO 9794 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:42:17.106  INFO 9794 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:42:17.111  INFO 9794 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:42:17.111  INFO 9794 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:42:17.148  INFO 9794 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:42:17.148  INFO 9794 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 718 ms
-2022-07-20 10:42:17.168  INFO 9794 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:42:17.345  INFO 9794 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:42:17.350  INFO 9794 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:42:17.561  INFO 9794 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:42:17.627  INFO 9794 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:42:17.672  INFO 9794 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:42:17.714  INFO 9794 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:42:17.732  INFO 9794 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:42:17.809  INFO 9794 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:42:17.849  INFO 9794 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:42:18.080  INFO 9794 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:42:18.082  INFO 9794 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:42:18.237  WARN 9794 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:42:18.389  INFO 9794 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:42:18.402  INFO 9794 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:42:18.407  INFO 9794 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.355 seconds (JVM running for 2.549)
-2022-07-20 10:42:50.409  INFO 9794 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:42:50.411  INFO 9794 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:42:50.415  INFO 9794 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:42:51.411  INFO 9806 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9806 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:42:51.411 DEBUG 9806 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:42:51.412  INFO 9806 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:42:51.435  INFO 9806 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:42:51.435  INFO 9806 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:42:51.703  INFO 9806 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:42:51.725  INFO 9806 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:42:51.852  INFO 9806 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:42:51.873  INFO 9806 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:42:52.088  INFO 9806 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:42:52.094  INFO 9806 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:42:52.094  INFO 9806 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:42:52.119  INFO 9806 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:42:52.120  INFO 9806 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
-2022-07-20 10:42:52.144  INFO 9806 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:42:52.298  INFO 9806 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:42:52.303  INFO 9806 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:42:52.519  INFO 9806 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:42:52.593  INFO 9806 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:42:52.628  INFO 9806 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:42:52.677  INFO 9806 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-07-20 10:42:52.693  INFO 9806 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2022-07-20 10:42:52.763  INFO 9806 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-07-20 10:42:52.805  INFO 9806 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-07-20 10:42:53.034  INFO 9806 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-07-20 10:42:53.039  INFO 9806 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:42:53.196  WARN 9806 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-20 10:42:53.348  INFO 9806 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-07-20 10:42:53.361  INFO 9806 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-07-20 10:42:53.366  INFO 9806 --- [restartedMain] c.c.api.TektonChallengeApplication       : Started TektonChallengeApplication in 2.123 seconds (JVM running for 2.325)
-2022-07-20 10:42:57.202  INFO 9806 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-20 10:42:57.203  INFO 9806 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-20 10:42:57.203  INFO 9806 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-07-20 10:42:57.295  INFO 9806 --- [http-nio-8080-exec-2] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: List com.challenge.api.service.ProductServiceImpl.getAllProducts() time taken to execute : 73 ms
-2022-07-20 10:43:00.549  INFO 9806 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.getProductById(Long) time taken to execute : 5 ms
-2022-07-20 10:43:01.271  INFO 9806 --- [http-nio-8080-exec-3] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 720 ms
-2022-07-20 10:43:05.175  INFO 9806 --- [http-nio-8080-exec-4] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Product com.challenge.api.service.ProductServiceImpl.getProductById(Long) time taken to execute : 9 ms
-2022-07-20 10:43:05.963  INFO 9806 --- [http-nio-8080-exec-4] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 787 ms
-2022-07-20 10:50:01.623  INFO 9806 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-07-20 10:50:01.627  INFO 9806 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:50:01.647  INFO 9806 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:50:03.761  INFO 9852 --- [restartedMain] c.c.api.TektonChallengeApplication       : Starting TektonChallengeApplication using Java 18.0.1.1 on Luiss-MacBook-Pro.local with PID 9852 (/Users/luischota/Desktop/projects/backend-java/tekton-challenge/target/classes started by luischota in /Users/luischota/Desktop/projects/backend-java/tekton-challenge)
-2022-07-20 10:50:03.761 DEBUG 9852 --- [restartedMain] c.c.api.TektonChallengeApplication       : Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-20 10:50:03.762  INFO 9852 --- [restartedMain] c.c.api.TektonChallengeApplication       : No active profile set, falling back to 1 default profile: "default"
-2022-07-20 10:50:03.782  INFO 9852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-07-20 10:50:03.782  INFO 9852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-07-20 10:50:04.038  INFO 9852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-20 10:50:04.060  INFO 9852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
-2022-07-20 10:50:04.186  INFO 9852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1df83d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 10:50:04.205  INFO 9852 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2022-07-20 10:50:04.414  INFO 9852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-07-20 10:50:04.419  INFO 9852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-20 10:50:04.419  INFO 9852 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2022-07-20 10:50:04.447  INFO 9852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-20 10:50:04.447  INFO 9852 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
-2022-07-20 10:50:04.469  INFO 9852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-20 10:50:04.622  INFO 9852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-20 10:50:04.627  INFO 9852 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://127.0.0.1:3306/db_tekton_challenge'
-2022-07-20 10:50:04.849  INFO 9852 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
-2022-07-20 10:50:04.921  INFO 9852 --- [restartedMain] liquibase.changelog                      : Reading from db_tekton_challenge.DATABASECHANGELOG
-2022-07-20 10:50:04.944  INFO 9852 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
-2022-07-20 10:50:04.945  WARN 9852 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:1fc789652ed9ee1e7407df4618e5066e
-
-2022-07-20 10:50:04.945  INFO 9852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-20 10:50:04.949  INFO 9852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-20 10:50:04.950  INFO 9852 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-20 10:50:04.955  INFO 9852 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-20 10:50:04.964 ERROR 9852 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:1fc789652ed9ee1e7407df4618e5066e
-
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.21.jar:5.3.21]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.1.jar:2.7.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.1.jar:2.7.1]
-	at com.challenge.api.TektonChallengeApplication.main(TektonChallengeApplication.java:17) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.1.jar:2.7.1]
-Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
-     1 change sets check sum
-          classpath:db/changelog/changelog.sql::1::liquibase was: 8:4b9664a82a8ee867f12402ed6ee7ad5e but is now: 8:1fc789652ed9ee1e7407df4618e5066e
-
-	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.21.jar:5.3.21]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.21.jar:5.3.21]
-	... 21 common frames omitted
-
+2022-07-21 16:21:56.324  INFO 14471 --- [http-nio-8080-exec-10] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 564 ms
+2022-07-21 16:22:02.213  INFO 14471 --- [http-nio-8080-exec-1] c.c.api.advice.ExecuteTimeTrackerAdvice  : Method name: Image com.challenge.api.externalService.ImageServiceImpl.getPhoto(Long) time taken to execute : 544 ms

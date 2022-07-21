@@ -1,8 +1,9 @@
-package com.challenge.api.service;
+package com.challenge.api.service.serviceImpl;
 
 import com.challenge.api.advice.TrackExecutionTime;
 import com.challenge.api.entity.Product;
 import com.challenge.api.repository.ProductRepository;
+import com.challenge.api.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
