@@ -1,10 +1,10 @@
 package com.challenge.api.controller;
 
+import com.challenge.api.entity.Image;
 import com.challenge.api.entity.Product;
-import com.challenge.api.externalService.PhotoService;
+import com.challenge.api.externalService.ImageService;
 import com.challenge.api.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,7 +15,7 @@ public class ProductController {
     private ProductService productService;
 
     @Autowired
-    private PhotoService photoService;
+    private ImageService imageService;
 
     @GetMapping("/products")
     public List<Product> getAllProducts() {
@@ -24,7 +24,10 @@ public class ProductController {
 
     @GetMapping("/products/{id}")
     public Product getProductById(@PathVariable("id") Long id) {
-        return productService.getProductById(id);
+        Product product = productService.getProductById(id);
+        Image image = imageService.getPhoto(id);
+        product.addImage(image);
+        return product;
     }
 
     @PostMapping("/products")
@@ -38,7 +41,7 @@ public class ProductController {
     }
 
     @GetMapping("/photos/{id}")
-    public ResponseEntity<?> getCountries(@PathVariable("id") Long id) {
-        return photoService.getPhoto(id);
+    public Object getCountries(@PathVariable("id") Long id) {
+        return imageService.getPhoto(id);
     }
 }
